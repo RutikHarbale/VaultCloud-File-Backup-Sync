@@ -1,0 +1,108 @@
+# ==============================================================================
+# VaultCloud .gitignore — Secrets, Environment, Databases & Build Artifacts
+# ==============================================================================
+
+# --- Secrets & Environment Files (CRITICAL: NEVER COMMIT TO GIT) ---
+.env
+.env.*
+*.env
+*.env.*
+!.env.example
+!**/.env.example
+credentials.json
+**/credentials.json
+token.json
+**/token.json
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+
+# --- Databases & Local SQLite State ---
+*.sqlite
+*.sqlite3
+*.sqlite3-journal
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+**/sync_state.db*
+**/db.sqlite3*
+db.sqlite3
+db.sqlite3-journal
+app/sync_state.db
+
+# --- Encrypted Blob Stores & Local Sync Folders ---
+file_storage/
+**/file_storage/
+*.enc
+synced_folder/
+**/synced_folder/
+VaultCloudBackup/
+**/VaultCloudBackup/
+
+# --- Python & Virtual Environments ---
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+**/.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# --- Backup, Scratch & Temporary Files ---
+*.bak
+**/*.bak
+scratch/
+**/scratch/
+tmp/
+**/tmp/
+*.tmp
+*.temp
+* (conflicted copy*)*
+
+# --- Node.js & Frontend Artifacts ---
+node_modules/
+**/node_modules/
+frontend/dist/
+frontend/build/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.oxlint-cache/
+
+# --- IDE & Operating System Artifacts ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
